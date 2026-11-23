@@ -1,31 +1,30 @@
-TEMAKI SUSHI — SITIO WEB PARA GITHUB + RENDER
+TEMAKI SUSHI — Sitio estático (GitHub + Render)
+================================================
 
-1) Abre index.html en un editor de texto (por ejemplo VS Code o Bloc de notas).
-2) Busca el bloque WHATSAPP cerca del final del archivo. Completa ambos números oficiales:
+SUCURSALES CONFIGURADAS
+- Peñaflor: WhatsApp +56 9 5521 8192 → https://wa.me/56955218192
+  Instagram: https://www.instagram.com/temaki_sushii67/
+- Talagante: WhatsApp +56 9 2221 2347 → https://wa.me/56922212347
+  Instagram: https://www.instagram.com/temakitalagante/
 
-   const WHATSAPP = {
-     penaflor: "569XXXXXXXX", // número real para Peñaflor
-     talagante: "569YYYYYYYY" // número real para Talagante
-   };
+CÓMO SUBIR A GITHUB + RENDER
+1. Descomprimir el ZIP. Subir index.html y la carpeta assets al nivel raíz del repositorio.
+2. En Render, crear New → Static Site y conectar el repositorio de GitHub.
+3. Build Command: dejar vacío si lo permite, o escribir 'echo Sitio listo'.
+4. Publish Directory: . (un punto).
+5. Publicar. El enlace HTTPS que entrega Render mostrará el sitio.
 
-   NO uses el signo +, espacios ni guiones.
-   Los números están deliberadamente VACÍOS hasta que confirmes los números reales de cada local.
-   Mientras estén vacíos, el formulario mostrará un aviso y no podrá abrir WhatsApp.
+CÓMO FUNCIONAN LOS PEDIDOS
+- El visitante elige Peñaflor o Talagante.
+- Rellena el formulario. Si elige delivery, se exige dirección y confirmación del recargo variable.
+- Al presionar "Enviar pedido por WhatsApp", se abre WhatsApp con el mensaje completo y el contacto CORRECTO de la sucursal.
+- IMPORTANTE: el cliente DEBE presionar ENVIAR dentro de WhatsApp. No existe envío automático ni almacén de pedidos en el sitio.
+- El precio final y el costo de despacho los confirma la sucursal por WhatsApp antes de cerrar el pedido.
+- Los precios visibles en promociones Talagante fueron tomados de las imágenes aportadas; verifica vigencia antes de publicarlos.
 
-3) Se incluyen dos formularios (uno por sucursal), fotos de ambos locales, logo,
-   video del interior y aviso del recargo por distancia. El precio de envío
-   NO se calcula automáticamente: debe confirmarse por WhatsApp.
-4) Los horarios están basados en los datos proporcionados. Verifica que
-   sean correctos para las dos sucursales antes de publicar.
-5) Sube index.html, LEEME.txt y la carpeta assets/ a la raíz de tu repositorio GitHub.
-6) En Render: New > Static Site > Conecta repositorio GitHub.
-   Build command: deja vacío si lo permite el panel (o usa `echo ready`).
-   Publish directory: .
-   Publica.
+ARCHIVOS
+- index.html: sitio completo; estilos y JavaScript integrados.
+- assets/: logo, fotografías de ambos locales, video y afiches seleccionados.
+- No hay dependencias, backend, API ni base de datos.
 
-IMPORTANTE:
-- Al presionar Enviar pedido se abre WhatsApp con el texto preparado.
-  El usuario DEBE pulsar "Enviar" en WhatsApp. El sitio no envía mensajes por su cuenta.
-- No hay cobro ni cálculos de precios sin una carta de precios configurada.
-- Los formularios NO guardan datos personales en un servidor; construyen el mensaje localmente.
-- No se ha inventado ni asignado automáticamente un número de WhatsApp a ninguna sucursal.
+CONSEJO: abre index.html para una prueba rápida con Internet; para probar rutas con video o desplegar, usa Render.

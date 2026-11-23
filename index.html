@@ -94,6 +94,38 @@
     @media(max-width:780px){.menu{gap:12px;font-size:.76rem}.menu a:nth-child(2){display:none}.video-seccion{grid-template-columns:1fr}.video-marco{height:310px}.horario-grid{grid-template-columns:1fr}}
     @media(max-width:670px){.contenedor{width:min(100% - 26px,540px)}.marca img{width:66px;height:66px}.marca strong{font-size:1.18rem}.marca small{font-size:.59rem}.menu a:not(.menu-boton){display:none}.menu .menu-boton{padding:9px 11px}.hero{padding:52px 0 33px}.sucursales{grid-template-columns:1fr}.foto{height:225px}.cuerpo{padding:23px}.campos{grid-template-columns:1fr}.form-top{flex-direction:column;align-items:flex-start}.form-section{margin-bottom:35px}.horarios{padding:24px 20px}.video-seccion{padding:18px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+    /* Promociones, piezas gráficas y redes sociales en negro, rojo y blanco */
+    .enlaces-local{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 20px}
+    .enlaces-local a{display:inline-block;text-decoration:none;font-size:.77rem;font-weight:800;border-radius:8px;border:1px solid #666;padding:9px 11px;color:#fff;background:#292b2e}
+    .enlaces-local a:hover{border-color:#ff544c;background:#372021}
+    .cumple{margin:15px auto 36px;border-radius:15px;overflow:hidden;border:1px solid #484043;background:#18191b}
+    .cumple img{width:100%;height:auto;display:block;background:#f5f3ef}
+    .cumple-abajo{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 22px;flex-wrap:wrap}
+    .cumple-abajo span{font-weight:800;color:#fff;font-size:.98rem}
+    .cumple-abajo .boton{font-size:.82rem;padding:10px 15px}
+    .promociones{margin:12px 0 52px;scroll-margin-top:26px}
+    .promos-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:25px}
+    .promo-card{background:#191b1d;border:1px solid #474144;border-radius:15px;overflow:hidden;display:flex;flex-direction:column;min-width:0}
+    .promo-imagen{height:345px;display:flex;justify-content:center;align-items:center;background:radial-gradient(ellipse at 50% 35%,#58201a,#1b1a1b 72%);border-bottom:2px solid var(--rojo)}
+    .promo-imagen img{max-height:100%;height:100%;width:100%;object-fit:contain;transition:transform .2s}
+    .promo-imagen:hover img{transform:scale(1.02)}
+    .promo-info{padding:21px;flex:1;display:flex;flex-direction:column;align-items:flex-start}
+    .promo-info h3{font-size:1.32rem;line-height:1.2;margin:11px 0;color:#fff}
+    .promo-info p{font-size:.89rem;color:#d4d4d5;flex:1;margin:0 0 17px}
+    .promo-info strong{color:#fff;font-size:1.05rem}
+    .promo-info .boton{width:100%;padding:12px 10px;font-size:.88rem}
+    .opciones-carta{padding:17px;border-radius:11px;border:1px solid #714038;background:#2c1d1c}
+    .opciones-carta p{margin:3px 0 12px;color:#e2d4d1;font-size:.87rem}
+    .campo-etiqueta{display:block;letter-spacing:.05em}
+    .chips{display:flex;flex-wrap:wrap;gap:9px}
+    .chips button{background:#131415;border:1px solid #9f4a42;border-radius:7px;color:#fff;font-size:.8rem;padding:9px 12px;cursor:pointer;font-weight:760}
+    .chips button:hover{background:#5a1f1d;border-color:#f44c42}
+    .footer-redes{margin:12px 0;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .footer-redes a{font-weight:780;text-decoration:none;border:1px solid #7a3330;border-radius:7px;padding:7px 11px;color:#fff}
+    .footer-redes a:hover{background:#5a211e}
+    @media(max-width:850px){.promos-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.promo-card:last-child{grid-column:1/-1}.promo-card:last-child .promo-imagen{height:390px}}
+    @media(max-width:600px){.promos-grid{grid-template-columns:1fr}.promo-card:last-child{grid-column:auto}.promo-imagen,.promo-card:last-child .promo-imagen{height:auto;max-height:none}.promo-imagen img{height:auto;max-height:580px}.cumple-abajo{padding:14px}.cumple-abajo .boton{width:100%}.enlaces-local{width:100%}.enlaces-local a{flex:1}}
   </style>
 </head>
 <body>
@@ -114,13 +146,22 @@
       <p class="hero-sub">Delivery y retiro en local · Recargo de despacho sujeto a distancia</p>
     </section>
 
-    <div class="bloque-titulo" id="sucursales"><span class="etiqueta">Dos locales, el mismo gran sabor</span><h2>ELIGE TU SUCURSAL</h2><p>Tu pedido llegará al WhatsApp correspondiente a la sucursal que elijas.</p></div>
+
+    <section class="cumple" aria-label="Celebra tu cumpleaños con Temaki Sushi">
+      <img src="assets/cumpleanos-temaki.webp" alt="Temaki Sushi: celebra tu cumpleaños, sabores que hacen tu día inolvidable" width="1600" height="533" loading="lazy">
+      <div class="cumple-abajo"><span>🎉 Celebra tus momentos especiales con Temaki Sushi</span><button class="boton boton-secundario" type="button" data-destino="penaflor" data-agregar="Hola, quisiera consultar por celebraciones de cumpleaños en el local de Peñaflor.">Consultar en Peñaflor →</button></div>
+    </section>
+    <div class="bloque-titulo" id="sucursales"><span class="etiqueta">Dos locales, el mismo gran sabor</span><h2>ELIGE TU SUCURSAL</h2><p>Cada formulario abre el WhatsApp oficial de la sucursal elegida, con tus datos y tu pedido listos para enviar.</p></div>
     <section class="sucursales" aria-label="Selecciona una sucursal">
       <article class="sucursal">
         <img class="foto penaflor" src="assets/local-penaflor.webp" alt="Fachada de Temaki Sushi en Peñaflor" width="1150" height="533">
         <div class="cuerpo"><span class="pill">Sucursal 01 · Peñaflor</span><h2>Porque en Peñaflor se come rico</h2>
           <p>Donde la calidad se nota y el sabor te abraza. Rolls estrella, ingredientes frescos y preparaciones para compartir.</p>
           <ul class="tags"><li>Rolls Nikkei</li><li>Rolls a la carta</li><li>Promociones</li><li>Hand Rolls</li><li>Ceviche</li><li>Sushi Burger</li><li>Sushipleto</li></ul>
+          <div class="enlaces-local">
+            <a href="https://www.instagram.com/temaki_sushii67/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Temaki Sushi Peñaflor">◎ Instagram Peñaflor</a>
+            <a href="https://wa.me/56955218192" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Temaki Sushi Peñaflor">● WhatsApp +56 9 5521 8192</a>
+          </div>
           <button class="boton" type="button" data-abrir="penaflor">🍱 Hacer pedido · Peñaflor →</button>
         </div>
       </article>
@@ -130,6 +171,10 @@
           <p>Promociones y preparaciones frescas para disfrutar con familia y amigos. Delivery y retiro en local.</p>
           <ul class="tags"><li>Promociones</li><li>Rolls Nikkei</li><li>Rolls a la carta</li><li>Hand Rolls</li><li>Ceviche</li><li>Gohan</li><li>Sushi Burger</li><li>Sushipleto</li></ul>
           <div class="dato-sucursal">📍 <strong>Enrique Alcalde 1296, Talagante</strong></div>
+          <div class="enlaces-local">
+            <a href="https://www.instagram.com/temakitalagante/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Temaki Sushi Talagante">◎ Instagram Talagante</a>
+            <a href="https://wa.me/56922212347" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Temaki Sushi Talagante">● WhatsApp +56 9 2221 2347</a>
+          </div>
           <button class="boton" type="button" data-abrir="talagante">🍱 Hacer pedido · Talagante →</button>
         </div>
       </article>
@@ -140,6 +185,25 @@
       Llegamos hasta tu domicilio. El valor del despacho puede incluir un pequeño recargo de acuerdo con la distancia hasta tu dirección. Antes de confirmar, nuestra sucursal te informará por WhatsApp el costo del envío y el total de tu compra. También puedes elegir <b>retiro en local</b> sin cargo de delivery.
     </aside>
 
+
+
+    <section id="promociones" class="promociones" aria-labelledby="promociones-titulo">
+      <div class="bloque-titulo"><span class="etiqueta">Galería de Temaki Sushi</span><h2 id="promociones-titulo">ANTOJOS, PROMOS Y BUENOS MOMENTOS</h2><p>Inspírate con nuestras publicaciones. Las promociones y precios de Talagante están sujetos a confirmación al pedir.</p></div>
+      <div class="promos-grid">
+        <article class="promo-card">
+          <a class="promo-imagen" href="assets/promo-60-tal.webp" target="_blank" rel="noopener noreferrer" aria-label="Ampliar promoción 60 piezas mixtas Talagante"><img src="assets/promo-60-tal.webp" alt="Publicidad de 60 piezas mixtas Talagante: oferta $12.000, precio normal $15.000" loading="lazy" width="700" height="700"></a>
+          <div class="promo-info"><span class="pill">Talagante · Oferta publicada</span><h3>60 piezas mixtas</h3><p>En la imagen promocional: <strong>$12.000</strong> (precio normal $15.000). Confirma vigencia y disponibilidad al pedir.</p><button class="boton" type="button" data-destino="talagante" data-agregar="1 promoción de 60 piezas mixtas (oferta publicada $12.000, confirmar vigencia)">Pedir esta promoción →</button></div>
+        </article>
+        <article class="promo-card">
+          <a class="promo-imagen" href="assets/carta-talagante.webp" target="_blank" rel="noopener noreferrer" aria-label="Ampliar carta y promociones Talagante"><img src="assets/carta-talagante.webp" alt="Carta promocional de Temaki Sushi Talagante con rolls, promociones y hand rolls" loading="lazy" width="700" height="875"></a>
+          <div class="promo-info"><span class="pill">Talagante · Carta promocional</span><h3>Rolls, promociones y hand rolls</h3><p>Encuentra opciones para compartir, rolls especiales y hand rolls. Pulsa la imagen para ampliar y leer la carta.</p><button class="boton" type="button" data-abrir="talagante">Pedir en Talagante →</button></div>
+        </article>
+        <article class="promo-card">
+          <a class="promo-imagen" href="assets/familia-penaflor.webp" target="_blank" rel="noopener noreferrer" aria-label="Ampliar afiche Temaki Sushi Peñaflor"><img src="assets/familia-penaflor.webp" alt="Temaki Sushi Peñaflor: ven con tu familia y amigos, vive un momento inolvidable" loading="lazy" width="700" height="1243"></a>
+          <div class="promo-info"><span class="pill">Peñaflor · Ven a visitarnos</span><h3>Familia, amigos y buen sushi</h3><p>Comparte un momento especial en Peñaflor. También puedes hacer tu pedido para retirar o recibir en casa.</p><button class="boton" type="button" data-abrir="penaflor">Pedir en Peñaflor →</button></div>
+        </article>
+      </div>
+    </section>
 
     <section class="video-seccion" aria-labelledby="conoce-local">
       <div class="video-texto"><span class="etiqueta">Una experiencia para compartir</span><h2 id="conoce-local">VEN A DISFRUTAR TEMAKI SUSHI</h2><p>Un lugar para reunirte y disfrutar sushi fresco, promociones y mucho sabor. Mira nuestro local por dentro.</p></div>
@@ -153,7 +217,7 @@
 
     <section id="form-penaflor" class="form-section" aria-labelledby="titulo-penaflor" hidden>
       <div class="form-top"><div><span class="etiqueta">Formulario de pedidos</span><h2 id="titulo-penaflor">Sucursal Peñaflor</h2></div><button class="enlace" type="button" data-volver>← Cambiar de sucursal</button></div>
-      <p class="form-explica">Tu pedido se enviará al número de WhatsApp configurado para Peñaflor.</p>
+      <p class="form-explica">Tu pedido se preparará para enviar a <strong>WhatsApp Peñaflor: +56 9 5521 8192</strong>. Revisa el mensaje y presiona Enviar en WhatsApp.</p>
       <form data-sucursal="penaflor">
         <div class="campos">
           <div class="campo"><label for="penaflor-nombre">Tu nombre *</label><input id="penaflor-nombre" name="nombre" autocomplete="name" placeholder="Nombre y apellido" required maxlength="90"></div>
@@ -173,18 +237,31 @@
           <div class="campo"><label for="penaflor-pago">Forma de pago</label><select id="penaflor-pago" name="pago"><option value="Por coordinar">Por coordinar</option><option>Transferencia</option><option>Efectivo</option><option>Consultar pago con tarjeta</option></select></div>
           <div class="campo"><label for="penaflor-observaciones">Observaciones</label><input id="penaflor-observaciones" name="observaciones" maxlength="350" placeholder="Alergias, preferencias u otras notas"></div>
         </div>
-        <div class="acciones"><button class="boton boton-whatsapp" type="submit">Enviar pedido por WhatsApp →</button><p>Se abrirá WhatsApp con tu pedido escrito. La sucursal confirmará disponibilidad, precio total y entrega.</p></div>
+        <div class="acciones"><button class="boton boton-whatsapp" type="submit">Enviar pedido por WhatsApp →</button><p>Se abrirá WhatsApp con el pedido escrito. Debes presionar <strong>Enviar</strong> en WhatsApp. El local confirmará precios, disponibilidad y delivery.</p></div>
         <p class="mensaje-error" role="alert" aria-live="polite"></p>
       </form>
     </section>
 
     <section id="form-talagante" class="form-section" aria-labelledby="titulo-talagante" hidden>
       <div class="form-top"><div><span class="etiqueta">Formulario de pedidos</span><h2 id="titulo-talagante">Sucursal Talagante</h2></div><button class="enlace" type="button" data-volver>← Cambiar de sucursal</button></div>
-      <p class="form-explica">Tu pedido se enviará al número de WhatsApp configurado para Talagante.</p>
+      <p class="form-explica">Tu pedido se preparará para enviar a <strong>WhatsApp Talagante: +56 9 2221 2347</strong>. Revisa el mensaje y presiona Enviar en WhatsApp.</p>
       <form data-sucursal="talagante">
         <div class="campos">
           <div class="campo"><label for="talagante-nombre">Tu nombre *</label><input id="talagante-nombre" name="nombre" autocomplete="name" placeholder="Nombre y apellido" required maxlength="90"></div>
           <div class="campo"><label for="talagante-telefono">Tu teléfono *</label><input id="talagante-telefono" name="telefono" inputmode="tel" type="tel" autocomplete="tel" placeholder="+56 9 ..." required maxlength="40"></div>
+          <div class="campo completo opciones-carta">
+            <span class="etiqueta campo-etiqueta">Atajos de la carta publicada de Talagante</span>
+            <p>Agrega opciones y edita las cantidades en el cuadro del pedido. Precios sujetos a confirmación.</p>
+            <div class="chips">
+              <button type="button" data-carta="Promo 30 piezas mixtas ($9.000 publicado)">+ 30 piezas · $9.000</button>
+              <button type="button" data-carta="Promo 40 piezas mixtas ($11.000 publicado)">+ 40 piezas · $11.000</button>
+              <button type="button" data-carta="Promo 50 piezas fritas ($13.000 publicado)">+ 50 piezas · $13.000</button>
+              <button type="button" data-carta="Promo 60 piezas mixtas (oferta publicada $12.000, confirmar vigencia)">+ 60 piezas · oferta $12.000</button>
+              <button type="button" data-carta="Roll Huancaína ($6.500 publicado)">+ Roll Huancaína · $6.500</button>
+              <button type="button" data-carta="Roll Acevichado ($6.500 publicado)">+ Roll Acevichado · $6.500</button>
+              <button type="button" data-carta="Hand roll (indicar ingredientes y precio según carta)">+ Hand roll</button>
+            </div>
+          </div>
           <div class="campo completo"><label for="talagante-productos">¿Qué deseas pedir? *</label><textarea id="talagante-productos" name="productos" required maxlength="2500" placeholder="Ej.: 2 rolls de salmón, 1 bebida, sin cebollín..."></textarea></div>
         </div>
         <div class="campo"><label>¿Cómo recibirás tu pedido? *</label><div class="entrega"><label class="opcion"><input type="radio" name="entrega" value="Retiro en local" checked> Retiro en el local</label><label class="opcion"><input type="radio" name="entrega" value="Delivery"> Delivery a domicilio</label></div></div>
@@ -200,20 +277,20 @@
           <div class="campo"><label for="talagante-pago">Forma de pago</label><select id="talagante-pago" name="pago"><option value="Por coordinar">Por coordinar</option><option>Transferencia</option><option>Efectivo</option><option>Consultar pago con tarjeta</option></select></div>
           <div class="campo"><label for="talagante-observaciones">Observaciones</label><input id="talagante-observaciones" name="observaciones" maxlength="350" placeholder="Alergias, preferencias u otras notas"></div>
         </div>
-        <div class="acciones"><button class="boton boton-whatsapp" type="submit">Enviar pedido por WhatsApp →</button><p>Se abrirá WhatsApp con tu pedido escrito. La sucursal confirmará disponibilidad, precio total y entrega.</p></div>
+        <div class="acciones"><button class="boton boton-whatsapp" type="submit">Enviar pedido por WhatsApp →</button><p>Se abrirá WhatsApp con el pedido escrito. Debes presionar <strong>Enviar</strong> en WhatsApp. El local confirmará precios, disponibilidad y delivery.</p></div>
         <p class="mensaje-error" role="alert" aria-live="polite"></p>
       </form>
     </section>
   </main>
-  <footer><b>TEMAKI SUSHI</b> · Peñaflor y Talagante<div class="footer-linea">Calidad que se nota. Sabor que te abraza.</div>© <span id="anio"></span> Temaki Sushi · Todos los derechos reservados</footer>
+  <footer><b>TEMAKI SUSHI</b> · Peñaflor y Talagante
+    <div class="footer-redes"><a href="https://www.instagram.com/temaki_sushii67/" target="_blank" rel="noopener noreferrer">Instagram Peñaflor</a><a href="https://www.instagram.com/temakitalagante/" target="_blank" rel="noopener noreferrer">Instagram Talagante</a></div>
+    <div class="footer-linea">Calidad que se nota. Sabor que te abraza.</div>© <span id="anio"></span> Temaki Sushi · Todos los derechos reservados</footer>
 
   <script>
-    // IMPORTANTE: pega aquí los números oficiales de CADA sucursal.
-    // Formato: código de país + número, SIN +, espacios ni guiones.
-    // Ejemplo de formato chileno (NO un número real): "56912345678".
+    // Números oficiales proporcionados por Temaki Sushi. Solo dígitos: 56 + 9 + número.
     const WHATSAPP = {
-      penaflor: "", // Reemplaza con el WhatsApp oficial de PEÑAFLOR.
-      talagante: "" // Reemplaza con el WhatsApp oficial de TALAGANTE.
+      penaflor: "56955218192", // Temaki Sushi Peñaflor
+      talagante: "56922212347" // Temaki Sushi Talagante
     };
 
     const nombres = { penaflor: "Peñaflor", talagante: "Talagante" };
@@ -227,6 +304,25 @@
         document.getElementById(`form-${elegida}`).scrollIntoView({ behavior: "smooth", block: "start" });
       });
     });
+    // Botones de promociones: agregan el producto y abren el formulario de la sucursal correcta.
+    document.querySelectorAll("[data-agregar]").forEach(boton => {
+      boton.addEventListener("click", () => {
+        const sucursal = boton.dataset.destino;
+        const form = document.querySelector(`form[data-sucursal="${sucursal}"]`);
+        const textarea = form.elements.namedItem("productos");
+        textarea.value = textarea.value.trim() ? textarea.value.trim() + "\n" + boton.dataset.agregar : boton.dataset.agregar;
+        secciones.forEach(sec => { sec.hidden = sec.id !== `form-${sucursal}`; });
+        document.getElementById(`form-${sucursal}`).scrollIntoView({ behavior: "smooth", block: "start" });
+        textarea.focus({ preventScroll: true });
+      });
+    });
+    document.querySelectorAll("[data-carta]").forEach(boton => {
+      boton.addEventListener("click", () => {
+        const area = document.getElementById("talagante-productos");
+        area.value = area.value.trim() ? area.value.trim() + "\n" + boton.dataset.carta : boton.dataset.carta;
+      });
+    });
+
     document.querySelectorAll("[data-volver]").forEach(boton => {
       boton.addEventListener("click", () => {
         secciones.forEach(seccion => { seccion.hidden = true; });
