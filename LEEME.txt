@@ -1,0 +1,31 @@
+TEMAKI SUSHI — SITIO WEB PARA GITHUB + RENDER
+
+1) Abre index.html en un editor de texto (por ejemplo VS Code o Bloc de notas).
+2) Busca el bloque WHATSAPP cerca del final del archivo. Completa ambos números oficiales:
+
+   const WHATSAPP = {
+     penaflor: "569XXXXXXXX", // número real para Peñaflor
+     talagante: "569YYYYYYYY" // número real para Talagante
+   };
+
+   NO uses el signo +, espacios ni guiones.
+   Los números están deliberadamente VACÍOS hasta que confirmes los números reales de cada local.
+   Mientras estén vacíos, el formulario mostrará un aviso y no podrá abrir WhatsApp.
+
+3) Se incluyen dos formularios (uno por sucursal), fotos de ambos locales, logo,
+   video del interior y aviso del recargo por distancia. El precio de envío
+   NO se calcula automáticamente: debe confirmarse por WhatsApp.
+4) Los horarios están basados en los datos proporcionados. Verifica que
+   sean correctos para las dos sucursales antes de publicar.
+5) Sube index.html, LEEME.txt y la carpeta assets/ a la raíz de tu repositorio GitHub.
+6) En Render: New > Static Site > Conecta repositorio GitHub.
+   Build command: deja vacío si lo permite el panel (o usa `echo ready`).
+   Publish directory: .
+   Publica.
+
+IMPORTANTE:
+- Al presionar Enviar pedido se abre WhatsApp con el texto preparado.
+  El usuario DEBE pulsar "Enviar" en WhatsApp. El sitio no envía mensajes por su cuenta.
+- No hay cobro ni cálculos de precios sin una carta de precios configurada.
+- Los formularios NO guardan datos personales en un servidor; construyen el mensaje localmente.
+- No se ha inventado ni asignado automáticamente un número de WhatsApp a ninguna sucursal.

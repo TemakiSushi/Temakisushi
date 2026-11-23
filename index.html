@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0c0d0e">
+  <meta name="description" content="Realiza tu pedido a Temaki Sushi en Peñaflor o Talagante y envíalo al WhatsApp de tu sucursal.">
+  <title>Temaki Sushi | Pedidos Peñaflor y Talagante</title>
+  <style>
+
+    :root{--negro:#0c0d0e;--carbon:#151718;--superficie:#1c1f21;--rojo:#ee2c25;--rojo-oscuro:#bd1716;--blanco:#f9fafb;--gris:#b6b9bd;--muted:#858a90;--borde:#36393d;--verde:#21ac68;--sombra:0 20px 50px rgba(0,0,0,.35)}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;color:var(--blanco);background:var(--negro);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.58}
+    a{color:inherit}button,input,select,textarea{font:inherit}button{cursor:pointer}
+    ::selection{background:var(--rojo);color:white}
+    .contenedor{width:min(1160px,calc(100% - 40px));margin-inline:auto}
+    .barra{background:var(--rojo);color:white;font-weight:800;font-size:.76rem;letter-spacing:.15em;text-align:center;padding:8px 12px;text-transform:uppercase}
+    header{padding:18px 0 16px;border-bottom:1px solid var(--borde)}
+    .cabecera{display:flex;justify-content:space-between;align-items:center;gap:22px}
+    .marca{display:flex;align-items:center;justify-content:flex-start;gap:15px;text-align:left}
+    .marca img{width:78px;height:78px;object-fit:contain;border-radius:50%;background:#fff;border:3px solid var(--rojo);box-shadow:0 0 0 4px #ffffff13}
+    .marca strong{display:block;font-size:clamp(1.2rem,3.2vw,1.85rem);line-height:1.1;letter-spacing:.045em;font-weight:950}
+    .marca small{display:block;color:var(--gris);font-weight:750;letter-spacing:.18em;text-transform:uppercase;font-size:.67rem;margin-top:8px}
+    .menu{display:flex;gap:22px;align-items:center;font-weight:750;color:#e0e1e3;font-size:.87rem}
+    .menu a{text-decoration:none}.menu a:hover{color:#ff6058}
+    .menu .menu-boton{background:var(--rojo);color:white;padding:11px 16px;border-radius:8px}
+    .hero{position:relative;text-align:center;padding:75px 0 50px;background:radial-gradient(ellipse at 50% -20%,#8a1a1973,transparent 57%)}
+    .hero::before{content:"";position:absolute;inset:0 0 auto;pointer-events:none;height:1px;background:linear-gradient(90deg,transparent,#ee2c2599,transparent)}
+    .etiqueta{color:#ff514b;font-size:.77rem;font-weight:900;letter-spacing:.18em;text-transform:uppercase}
+    h1{font-size:clamp(2.4rem,5.9vw,5rem);line-height:1.05;letter-spacing:-.052em;margin:14px auto 18px;max-width:980px;font-weight:950}
+    h1 em{color:#ff4b42;font-style:normal}
+    .intro{color:#e2e3e5;font-size:clamp(1rem,1.8vw,1.18rem);margin:0 auto;max-width:710px}
+    .hero-acciones{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:26px}
+    .hero-sub{margin:22px auto 0;color:var(--muted);font-size:.86rem}
+    .bloque-titulo{text-align:center;padding:8px 0 6px}
+    .bloque-titulo h2{font-size:clamp(1.8rem,3.5vw,2.7rem);line-height:1.15;letter-spacing:-.03em;margin:10px 0}
+    .bloque-titulo p{color:var(--gris);margin:0 auto;max-width:670px}
+    .sucursales{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin:28px auto 20px;scroll-margin-top:25px}
+    .sucursal{position:relative;background:var(--carbon);border:1px solid #454045;border-radius:18px;overflow:hidden;box-shadow:var(--sombra);display:flex;flex-direction:column;transition:transform .2s,border-color .2s}
+    .sucursal:hover{transform:translateY(-3px);border-color:var(--rojo)}
+    .sucursal::after{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--rojo)}
+    .foto{height:275px;width:100%;object-fit:cover;display:block;filter:contrast(1.07) saturate(1.06)}
+    .foto.penaflor{object-position:center}.foto.talagante{object-position:center 43%}
+    .cuerpo{padding:27px 28px 28px;flex:1;display:flex;flex-direction:column;align-items:flex-start}
+    .pill{display:inline-block;border-radius:5px;color:#fff;background:#ee2c252a;border:1px solid #fa3a3465;padding:4px 11px;font-size:.73rem;text-transform:uppercase;letter-spacing:.11em;font-weight:850}
+    .cuerpo h2{font-size:2rem;line-height:1.2;margin:13px 0 7px;color:white;font-weight:900}
+    .cuerpo p{margin:0 0 16px;color:#cfd1d3}
+    .tags{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 22px;padding:0;list-style:none}
+    .tags li{font-size:.79rem;font-weight:720;color:#f0f1f2;border:1px solid #4b4d51;border-radius:7px;padding:5px 9px;background:#222426}
+    .dato-sucursal{font-size:.88rem;color:#d5d6d8;margin:0 0 14px}
+    .dato-sucursal strong{color:#fff}
+    .boton{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid transparent;background:var(--rojo);color:#fff;border-radius:9px;padding:14px 22px;font-weight:900;text-decoration:none;transition:background .2s,transform .2s}
+    .boton:hover{background:var(--rojo-oscuro);transform:translateY(-1px)}
+    .boton-secundario{background:transparent;border-color:#ff5d53;color:#fff}.boton-secundario:hover{background:#e92b2430}
+    .boton:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,.enlace:focus-visible{outline:3px solid #ffae94;outline-offset:3px}
+    .cuerpo .boton{margin-top:auto;width:100%}
+    .nota{background:#251818;border:1px solid #9e3d38;border-left:5px solid var(--rojo);border-radius:12px;padding:20px 22px;margin:25px auto 48px;color:#f1e1df}
+    .nota strong{display:block;color:#fff;margin-bottom:4px;font-size:1.03rem}
+    .separador{height:1px;background:linear-gradient(90deg,transparent,#4e2524,transparent);margin:26px 0 50px}
+    .video-seccion{display:grid;grid-template-columns:.82fr 1fr;gap:30px;align-items:center;background:#151718;border:1px solid var(--borde);border-radius:18px;padding:24px;margin:8px auto 45px}
+    .video-texto{padding:12px 10px 12px 14px}.video-texto h2{font-size:clamp(1.6rem,3vw,2.45rem);line-height:1.16;margin:12px 0}.video-texto p{color:var(--gris)}
+    .video-marco{width:min(100%,400px);height:310px;margin:auto;overflow:hidden;background:#000;border-radius:13px;border:1px solid #434346}
+    .video-marco video{width:100%;height:100%;object-fit:contain;background:#000;display:block}
+    .horarios{background:#17191a;border:1px solid var(--borde);padding:29px 32px;border-radius:17px;margin-bottom:50px}
+    .horarios h2{font-size:1.8rem;margin:0 0 16px}.horario-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+    .horario-grid div{border-radius:10px;background:#252729;padding:17px;border-top:3px solid var(--rojo)}.horario-grid b{display:block;color:white}.horario-grid span{display:block;font-weight:730;color:#d7d8d9;margin-top:5px}
+    .horarios small{display:block;color:var(--muted);margin-top:14px}
+    .form-section{background:#191b1e;border:1px solid #525256;border-top:4px solid var(--rojo);border-radius:18px;box-shadow:var(--sombra);padding:clamp(21px,4vw,42px);margin:16px auto 54px;scroll-margin-top:25px}
+    .form-section[hidden]{display:none}
+    .form-top{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:12px}
+    .form-top h2{font-size:clamp(1.6rem,3.4vw,2.3rem);margin:2px 0;color:white}
+    .enlace{background:none;color:#ff6d64;border:0;padding:8px 0;text-decoration:underline;font-weight:750}
+    .form-explica{color:var(--gris);margin:0 0 22px}
+    .campos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}
+    .campo{display:flex;flex-direction:column;gap:7px;min-width:0}.campo.completo{grid-column:1/-1}
+    label{font-weight:730;font-size:.94rem;color:#f6f7f8}
+    input:not([type=checkbox]):not([type=radio]),select,textarea{width:100%;border-radius:9px;border:1px solid #66676a;padding:12px 13px;background:#111315;color:#fff}
+    input::placeholder,textarea::placeholder{color:#9b9da0}
+    select option{color:#fff;background:#18191b}
+    textarea{min-height:130px;resize:vertical}
+    .entrega{margin:12px 0 4px;display:flex;gap:12px;flex-wrap:wrap}
+    .opcion{display:inline-flex;align-items:center;gap:8px;background:#292b2e;border:1px solid #5b5b5e;padding:11px 15px;border-radius:10px;cursor:pointer}
+    .opcion input{accent-color:var(--rojo)}
+    .domicilio{margin-top:17px}.domicilio[hidden]{display:none}
+    .alerta-delivery{border-radius:11px;padding:15px 17px;background:#332221;border:1px solid #a34d44;color:#fff1ed;margin:17px 0 12px}
+    .acepto{display:flex;gap:10px;align-items:flex-start;font-size:.93rem;font-weight:550}.acepto input{accent-color:var(--rojo);margin-top:5px;flex-shrink:0}
+    .acciones{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-top:25px}
+    .boton-whatsapp{background:#158a55;padding:15px 24px}.boton-whatsapp:hover{background:#0d6940}
+    .acciones p{color:var(--gris);margin:0;font-size:.87rem;flex:1;min-width:230px}
+    .mensaje-error{margin:14px 0 0;color:#ff9991;font-weight:800}.mensaje-error:empty{display:none}
+    footer{text-align:center;border-top:1px solid #3a3d40;padding:27px 16px 35px;font-size:.91rem;color:var(--gris)}
+    footer b{color:white}footer .footer-linea{margin:5px auto;color:#9a9ea4;font-size:.83rem}
+    @media(max-width:780px){.menu{gap:12px;font-size:.76rem}.menu a:nth-child(2){display:none}.video-seccion{grid-template-columns:1fr}.video-marco{height:310px}.horario-grid{grid-template-columns:1fr}}
+    @media(max-width:670px){.contenedor{width:min(100% - 26px,540px)}.marca img{width:66px;height:66px}.marca strong{font-size:1.18rem}.marca small{font-size:.59rem}.menu a:not(.menu-boton){display:none}.menu .menu-boton{padding:9px 11px}.hero{padding:52px 0 33px}.sucursales{grid-template-columns:1fr}.foto{height:225px}.cuerpo{padding:23px}.campos{grid-template-columns:1fr}.form-top{flex-direction:column;align-items:flex-start}.form-section{margin-bottom:35px}.horarios{padding:24px 20px}.video-seccion{padding:18px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+  </style>
+</head>
+<body>
+  <div class="barra">🍣 TEMAKI SUSHI · PEÑAFLOR Y TALAGANTE · PEDIDOS POR WHATSAPP</div>
+  <header><div class="contenedor cabecera">
+    <div class="marca">
+      <img src="assets/logo-temaki.webp" alt="Logo de Temaki Sushi" width="90" height="90">
+      <div><strong>TEMAKI SUSHI</strong><small>Peñaflor · Talagante</small></div>
+    </div>
+    <nav class="menu" aria-label="Navegación principal"><a href="#sucursales">Sucursales</a><a href="#horarios">Horarios</a><a class="menu-boton" href="#sucursales">Hacer pedido</a></nav>
+  </div></header>
+  <main class="contenedor">
+    <section class="hero" aria-labelledby="titulo">
+      <span class="etiqueta">Auténtico sabor · Frescura en cada bocado</span>
+      <h1>EL SABOR QUE <em>TE ABRAZA.</em></h1>
+      <p class="intro">Palta chilena cremosa, arroz en su punto perfecto y rolls que dan ganas de repetir. Elige tu local, prepara tu pedido y envíalo directo por WhatsApp.</p>
+      <div class="hero-acciones"><button type="button" class="boton" data-abrir="penaflor">🍱 Pedir en Peñaflor</button><button type="button" class="boton boton-secundario" data-abrir="talagante">🥢 Pedir en Talagante</button></div>
+      <p class="hero-sub">Delivery y retiro en local · Recargo de despacho sujeto a distancia</p>
+    </section>
+
+    <div class="bloque-titulo" id="sucursales"><span class="etiqueta">Dos locales, el mismo gran sabor</span><h2>ELIGE TU SUCURSAL</h2><p>Tu pedido llegará al WhatsApp correspondiente a la sucursal que elijas.</p></div>
+    <section class="sucursales" aria-label="Selecciona una sucursal">
+      <article class="sucursal">
+        <img class="foto penaflor" src="assets/local-penaflor.webp" alt="Fachada de Temaki Sushi en Peñaflor" width="1150" height="533">
+        <div class="cuerpo"><span class="pill">Sucursal 01 · Peñaflor</span><h2>Porque en Peñaflor se come rico</h2>
+          <p>Donde la calidad se nota y el sabor te abraza. Rolls estrella, ingredientes frescos y preparaciones para compartir.</p>
+          <ul class="tags"><li>Rolls Nikkei</li><li>Rolls a la carta</li><li>Promociones</li><li>Hand Rolls</li><li>Ceviche</li><li>Sushi Burger</li><li>Sushipleto</li></ul>
+          <button class="boton" type="button" data-abrir="penaflor">🍱 Hacer pedido · Peñaflor →</button>
+        </div>
+      </article>
+      <article class="sucursal">
+        <img class="foto talagante" src="assets/local-talagante.webp" alt="Entrada de Temaki Sushi en Talagante" width="507" height="819">
+        <div class="cuerpo"><span class="pill">Sucursal 02 · Talagante</span><h2>Talagante, puro sabor para compartir</h2>
+          <p>Promociones y preparaciones frescas para disfrutar con familia y amigos. Delivery y retiro en local.</p>
+          <ul class="tags"><li>Promociones</li><li>Rolls Nikkei</li><li>Rolls a la carta</li><li>Hand Rolls</li><li>Ceviche</li><li>Gohan</li><li>Sushi Burger</li><li>Sushipleto</li></ul>
+          <div class="dato-sucursal">📍 <strong>Enrique Alcalde 1296, Talagante</strong></div>
+          <button class="boton" type="button" data-abrir="talagante">🍱 Hacer pedido · Talagante →</button>
+        </div>
+      </article>
+    </section>
+
+    <aside class="nota" aria-label="Información de delivery">
+      <strong>🛵 Delivery con recargo según distancia</strong>
+      Llegamos hasta tu domicilio. El valor del despacho puede incluir un pequeño recargo de acuerdo con la distancia hasta tu dirección. Antes de confirmar, nuestra sucursal te informará por WhatsApp el costo del envío y el total de tu compra. También puedes elegir <b>retiro en local</b> sin cargo de delivery.
+    </aside>
+
+
+    <section class="video-seccion" aria-labelledby="conoce-local">
+      <div class="video-texto"><span class="etiqueta">Una experiencia para compartir</span><h2 id="conoce-local">VEN A DISFRUTAR TEMAKI SUSHI</h2><p>Un lugar para reunirte y disfrutar sushi fresco, promociones y mucho sabor. Mira nuestro local por dentro.</p></div>
+      <div class="video-marco"><video controls preload="none" playsinline poster="assets/video-portada.webp" aria-label="Video del interior de Temaki Sushi"><source src="assets/temaki-local.mp4" type="video/mp4">Tu navegador no puede reproducir este video.</video></div>
+    </section>
+    <section class="horarios" id="horarios" aria-labelledby="titulo-horarios">
+      <h2 id="titulo-horarios">🕒 HORARIOS DE ATENCIÓN</h2>
+      <div class="horario-grid"><div><b>Lunes a jueves</b><span>12:00 – 22:45</span></div><div><b>Viernes y sábado</b><span>12:00 – 23:45</span></div><div><b>Domingo</b><span>12:00 – 21:45</span></div></div>
+      <small>Horarios proporcionados por el local. Confirma la atención y disponibilidad al hacer tu pedido.</small>
+    </section>
+
+    <section id="form-penaflor" class="form-section" aria-labelledby="titulo-penaflor" hidden>
+      <div class="form-top"><div><span class="etiqueta">Formulario de pedidos</span><h2 id="titulo-penaflor">Sucursal Peñaflor</h2></div><button class="enlace" type="button" data-volver>← Cambiar de sucursal</button></div>
+      <p class="form-explica">Tu pedido se enviará al número de WhatsApp configurado para Peñaflor.</p>
+      <form data-sucursal="penaflor">
+        <div class="campos">
+          <div class="campo"><label for="penaflor-nombre">Tu nombre *</label><input id="penaflor-nombre" name="nombre" autocomplete="name" placeholder="Nombre y apellido" required maxlength="90"></div>
+          <div class="campo"><label for="penaflor-telefono">Tu teléfono *</label><input id="penaflor-telefono" name="telefono" inputmode="tel" type="tel" autocomplete="tel" placeholder="+56 9 ..." required maxlength="40"></div>
+          <div class="campo completo"><label for="penaflor-productos">¿Qué deseas pedir? *</label><textarea id="penaflor-productos" name="productos" required maxlength="2500" placeholder="Ej.: 2 rolls de salmón, 1 bebida, sin cebollín..."></textarea></div>
+        </div>
+        <div class="campo"><label>¿Cómo recibirás tu pedido? *</label><div class="entrega"><label class="opcion"><input type="radio" name="entrega" value="Retiro en local" checked> Retiro en el local</label><label class="opcion"><input type="radio" name="entrega" value="Delivery"> Delivery a domicilio</label></div></div>
+        <div class="domicilio" hidden>
+          <div class="campos">
+            <div class="campo completo"><label for="penaflor-direccion">Dirección de entrega *</label><input id="penaflor-direccion" name="direccion" autocomplete="street-address" placeholder="Calle, número, villa/comuna" maxlength="220"></div>
+            <div class="campo completo"><label for="penaflor-referencia">Referencias de la dirección</label><input id="penaflor-referencia" name="referencia" placeholder="Casa, color de portón, indicaciones..." maxlength="260"></div>
+          </div>
+          <div class="alerta-delivery">🚗 <strong>Recargo por distancia:</strong> el valor del delivery depende de tu dirección y se confirmará por WhatsApp antes de cerrar el pedido.</div>
+          <label class="acepto"><input type="checkbox" name="acepto-recargo"> Entiendo que el reparto puede tener un recargo variable según la distancia y que me informarán el total antes de confirmar.</label>
+        </div>
+        <div class="campos" style="margin-top:18px">
+          <div class="campo"><label for="penaflor-pago">Forma de pago</label><select id="penaflor-pago" name="pago"><option value="Por coordinar">Por coordinar</option><option>Transferencia</option><option>Efectivo</option><option>Consultar pago con tarjeta</option></select></div>
+          <div class="campo"><label for="penaflor-observaciones">Observaciones</label><input id="penaflor-observaciones" name="observaciones" maxlength="350" placeholder="Alergias, preferencias u otras notas"></div>
+        </div>
+        <div class="acciones"><button class="boton boton-whatsapp" type="submit">Enviar pedido por WhatsApp →</button><p>Se abrirá WhatsApp con tu pedido escrito. La sucursal confirmará disponibilidad, precio total y entrega.</p></div>
+        <p class="mensaje-error" role="alert" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section id="form-talagante" class="form-section" aria-labelledby="titulo-talagante" hidden>
+      <div class="form-top"><div><span class="etiqueta">Formulario de pedidos</span><h2 id="titulo-talagante">Sucursal Talagante</h2></div><button class="enlace" type="button" data-volver>← Cambiar de sucursal</button></div>
+      <p class="form-explica">Tu pedido se enviará al número de WhatsApp configurado para Talagante.</p>
+      <form data-sucursal="talagante">
+        <div class="campos">
+          <div class="campo"><label for="talagante-nombre">Tu nombre *</label><input id="talagante-nombre" name="nombre" autocomplete="name" placeholder="Nombre y apellido" required maxlength="90"></div>
+          <div class="campo"><label for="talagante-telefono">Tu teléfono *</label><input id="talagante-telefono" name="telefono" inputmode="tel" type="tel" autocomplete="tel" placeholder="+56 9 ..." required maxlength="40"></div>
+          <div class="campo completo"><label for="talagante-productos">¿Qué deseas pedir? *</label><textarea id="talagante-productos" name="productos" required maxlength="2500" placeholder="Ej.: 2 rolls de salmón, 1 bebida, sin cebollín..."></textarea></div>
+        </div>
+        <div class="campo"><label>¿Cómo recibirás tu pedido? *</label><div class="entrega"><label class="opcion"><input type="radio" name="entrega" value="Retiro en local" checked> Retiro en el local</label><label class="opcion"><input type="radio" name="entrega" value="Delivery"> Delivery a domicilio</label></div></div>
+        <div class="domicilio" hidden>
+          <div class="campos">
+            <div class="campo completo"><label for="talagante-direccion">Dirección de entrega *</label><input id="talagante-direccion" name="direccion" autocomplete="street-address" placeholder="Calle, número, villa/comuna" maxlength="220"></div>
+            <div class="campo completo"><label for="talagante-referencia">Referencias de la dirección</label><input id="talagante-referencia" name="referencia" placeholder="Casa, color de portón, indicaciones..." maxlength="260"></div>
+          </div>
+          <div class="alerta-delivery">🚗 <strong>Recargo por distancia:</strong> el valor del delivery depende de tu dirección y se confirmará por WhatsApp antes de cerrar el pedido.</div>
+          <label class="acepto"><input type="checkbox" name="acepto-recargo"> Entiendo que el reparto puede tener un recargo variable según la distancia y que me informarán el total antes de confirmar.</label>
+        </div>
+        <div class="campos" style="margin-top:18px">
+          <div class="campo"><label for="talagante-pago">Forma de pago</label><select id="talagante-pago" name="pago"><option value="Por coordinar">Por coordinar</option><option>Transferencia</option><option>Efectivo</option><option>Consultar pago con tarjeta</option></select></div>
+          <div class="campo"><label for="talagante-observaciones">Observaciones</label><input id="talagante-observaciones" name="observaciones" maxlength="350" placeholder="Alergias, preferencias u otras notas"></div>
+        </div>
+        <div class="acciones"><button class="boton boton-whatsapp" type="submit">Enviar pedido por WhatsApp →</button><p>Se abrirá WhatsApp con tu pedido escrito. La sucursal confirmará disponibilidad, precio total y entrega.</p></div>
+        <p class="mensaje-error" role="alert" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+  <footer><b>TEMAKI SUSHI</b> · Peñaflor y Talagante<div class="footer-linea">Calidad que se nota. Sabor que te abraza.</div>© <span id="anio"></span> Temaki Sushi · Todos los derechos reservados</footer>
+
+  <script>
+    // IMPORTANTE: pega aquí los números oficiales de CADA sucursal.
+    // Formato: código de país + número, SIN +, espacios ni guiones.
+    // Ejemplo de formato chileno (NO un número real): "56912345678".
+    const WHATSAPP = {
+      penaflor: "", // Reemplaza con el WhatsApp oficial de PEÑAFLOR.
+      talagante: "" // Reemplaza con el WhatsApp oficial de TALAGANTE.
+    };
+
+    const nombres = { penaflor: "Peñaflor", talagante: "Talagante" };
+    const secciones = [...document.querySelectorAll(".form-section")];
+    document.getElementById("anio").textContent = new Date().getFullYear();
+
+    document.querySelectorAll("[data-abrir]").forEach(boton => {
+      boton.addEventListener("click", () => {
+        const elegida = boton.dataset.abrir;
+        secciones.forEach(seccion => { seccion.hidden = seccion.id !== `form-${elegida}`; });
+        document.getElementById(`form-${elegida}`).scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    });
+    document.querySelectorAll("[data-volver]").forEach(boton => {
+      boton.addEventListener("click", () => {
+        secciones.forEach(seccion => { seccion.hidden = true; });
+        document.querySelector(".sucursales").scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    });
+
+    document.querySelectorAll("form[data-sucursal]").forEach(form => {
+      const domicilio = form.querySelector(".domicilio");
+      const direccion = form.elements.namedItem("direccion");
+      const acepto = form.elements.namedItem("acepto-recargo");
+      const error = form.querySelector(".mensaje-error");
+
+      function actualizarEntrega() {
+        const esDelivery = form.querySelector('input[name="entrega"]:checked').value === "Delivery";
+        domicilio.hidden = !esDelivery;
+        direccion.required = esDelivery;
+        acepto.required = esDelivery;
+        if (!esDelivery) acepto.checked = false;
+        error.textContent = "";
+      }
+      form.querySelectorAll('input[name="entrega"]').forEach(radio => radio.addEventListener("change", actualizarEntrega));
+      actualizarEntrega();
+
+      form.addEventListener("submit", (evento) => {
+        evento.preventDefault();
+        error.textContent = "";
+        if (!form.reportValidity()) return;
+        const sucursal = form.dataset.sucursal;
+        const numero = (WHATSAPP[sucursal] || "").replace(/\D/g, "");
+        if (!/^\d{10,15}$/.test(numero)) {
+          error.textContent = `Falta configurar el número de WhatsApp de ${nombres[sucursal]}. Modifícalo en el archivo index.html antes de publicar.`;
+          return;
+        }
+        const datos = new FormData(form);
+        const delivery = datos.get("entrega") === "Delivery";
+        const partes = [
+          `🍣 *NUEVO PEDIDO - TEMAKI SUSHI*`,
+          `📍 *Sucursal:* ${nombres[sucursal]}`,
+          `👤 *Cliente:* ${datos.get("nombre").trim()}`,
+          `📞 *Teléfono:* ${datos.get("telefono").trim()}`,
+          `🛍️ *Pedido:*\n${datos.get("productos").trim()}`,
+          `🚚 *Entrega:* ${datos.get("entrega")}`
+        ];
+        if (delivery) {
+          partes.push(`🏠 *Dirección:* ${datos.get("direccion").trim()}`);
+          if ((datos.get("referencia") || "").trim()) partes.push(`🗺️ *Referencias:* ${datos.get("referencia").trim()}`);
+          partes.push(`ℹ️ *Delivery:* Entiendo que hay un recargo según la distancia. Solicito confirmar el costo de envío antes de cerrar el pedido.`);
+        }
+        partes.push(`💳 *Pago:* ${datos.get("pago")}`);
+        if ((datos.get("observaciones") || "").trim()) partes.push(`📝 *Observaciones:* ${datos.get("observaciones").trim()}`);
+        partes.push(`✅ *Por favor confirmar disponibilidad, valores y total antes de preparar el pedido.*`);
+        const url = `https://wa.me/${numero}?text=${encodeURIComponent(partes.join("\n\n"))}`;
+        const ventana = window.open(url, "_blank", "noopener,noreferrer");
+        if (!ventana) window.location.href = url;
+      });
+    });
+  </script>
+</body>
+</html>
